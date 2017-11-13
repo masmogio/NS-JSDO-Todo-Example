@@ -3,6 +3,8 @@
 NativeScript JSDO Todo Example
 
 A sample application which implements a JSDO in Nativescript.
+In the sample uses fonts awesome https://docs.nativescript.org/ui/icon-fonts
+
 
 Prerequisites
 
