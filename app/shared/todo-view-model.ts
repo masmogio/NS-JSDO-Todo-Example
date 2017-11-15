@@ -28,12 +28,14 @@ class ViewModel extends Observable {
         this.todos = new ObservableArray<Todo>();
         view = this;
         var that = this;
+        var hosturl = 'Please introduce host name of JSDO';
+
 
         // Configuring service, catalog for using jsdo 
         try {
             progress.data.getSession({
-              serviceURI: "http://ec2-54-152-207-174.compute-1.amazonaws.com:8810/todo",
-              catalogURI: "http://ec2-54-152-207-174.compute-1.amazonaws.com:8810/todo/rest/static/todoService.json",      
+              serviceURI: hosturl + "/todo",
+              catalogURI: hosturl + "/todo/rest/static/todoService.json",      
               authenticationModel: "anonymous"
             }).done(function () {
                that.jsdo = new progress.data.JSDO({name: "todo"}); //Name of the resource
